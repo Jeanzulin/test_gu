@@ -1,13 +1,15 @@
 .top_area_wrap {
     height: 350px;
     background: url(../images/top_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
 .top_area_content {
     position: absolute;
     bottom: 80px;
-    left: 40px;
+    left: 8%;
 }
 .top_area_content .title-1{
     font-size: 42px;

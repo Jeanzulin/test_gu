@@ -6,7 +6,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 95vh;
+    height: 100vh;
     /* background: #3d81b5; */
     background: url(../images/kv.png) no-repeat;
     background-size: cover;
@@ -31,26 +31,11 @@
 
 .kv .content-txt {
     margin: 0 auto;
-    width: 60%;
-    /* max-width: 450px; */
+    width: 100%;
     padding-top: 32px;
     padding-left: 40px;
 }
 
-.kv .content-img {
-    margin: 0 auto;
-    height: 40%;
-    width: 40%;
-    max-width: 100%;
-    position: relative;
-}
-
-
-@media screen and (max-width: 1200px) {
-    .kv {
-        height: 520px;
-    }
-}
 
 @media screen and (max-width: 786px) {
     .kv {
@@ -58,18 +43,12 @@
     }
 
     .kv .content-txt {
-        padding-top: 15vh;
-        width: 100%;
-        max-width: 400px;
         text-align: center;
         padding-left: 0px;
     }
 
-    .kv .content-img {
-        width: 100%;
-        height: 35vh;
-    }
 }
+
 .title-2 {
     background: -webkit-linear-gradient(0deg, #6BB1DE 0%, #0969A8 100%);
     -webkit-background-clip: text;
@@ -98,7 +77,9 @@
 }
 
 @media screen and (max-width: 786px) {
-
+    .sec_about .content p{
+        font-size: 16px;
+     }
     .sec_about .content_img {
         order: 2;
         width: 100%;
