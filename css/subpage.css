@@ -7,9 +7,7 @@
 }
 
 .top_area_content {
-    position: absolute;
-    bottom: 80px;
-    left: 8%;
+    padding: 24px 64px;
 }
 .top_area_content .title-1{
     font-size: 42px;
@@ -22,9 +20,7 @@
         height: 320px;
     }
     .top_area_content {
-        position: absolute;
-        bottom: 40px;
-        left: 20px;
+        padding: 24px;
     }
     .top_area_content .title-1{
         font-size: 30px;

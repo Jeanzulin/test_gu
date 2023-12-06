@@ -6,10 +6,10 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    height: 100vh;
-    /* background: #3d81b5; */
+    height: 95vh;
     background: url(../images/kv.png) no-repeat;
     background-size: cover;
+    background-position: right;
 
 }
 
@@ -188,14 +188,24 @@
     color: #ffffff;
     margin-bottom: 64px;
 }
-
-.sec_clients .content img {
+.sec_clients .content{
+    width: 800px;
+}
+.sec_clients .client_logo{
+    width: 25%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.sec_clients .client_logo img {
     width: 100px;
 }
 
 @media screen and (max-width: 768px) {
-    .sec_clients .content img {
-        width: 100px;
+    .sec_clients .content{
+        width: 100%;
+    }
+    .sec_clients .client_logo img {
+        width: 80px;
     }
 }
 
