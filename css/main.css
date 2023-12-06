@@ -837,14 +837,6 @@ hr {
     padding-top: 4px;
 }
 
-.logo_line {
-    width: 2px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px 13px;
-}
-
-
 header {
     z-index: 10;
     width: 100%;
@@ -958,7 +950,7 @@ nav ul li {
 
 nav ul li a {
     color: #484848;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 55px;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -1099,10 +1091,6 @@ nav ul li:hover a {
 
 
 @media screen and (min-width: 801px) {
-    .guiclogo img {
-        height: 44px;
-    }
-
     nav {
         float: right;
         width: auto;
@@ -1126,10 +1114,6 @@ nav ul li:hover a {
 
 
 @media screen and (max-width: 886px) {
-    .head_logo {
-        max-width: 300px;
-    }
-
     nav ul {
         padding: 0;
     }
@@ -1140,7 +1124,6 @@ nav ul li:hover a {
 }
 
 @media screen and (max-width: 800px) {
-
     .m_cta {
         background: rgba(0, 158, 150, 0.85);
         position: fixed;
@@ -1420,26 +1403,9 @@ nav ul li:hover a {
     display: block;
     margin-top: 4px;
 }
-@media screen and (max-width: 820px) {
-    header .container {
-        padding: 0 14px;
-    }
 
-    header .head_logo {
-        float: none;
-        padding-top: 0;
-        height: 48px;
-    }
-
-    header .guiclogo {
-        max-height: 100%;
-    }
-    header .guiclogo img{
-        height: 48px;
-    }
-    header .logo_line {
-        margin: 0px 10px;
-    }
+header .guiclogo img{
+    height: 48px;
 }
 @media (max-width: 768px) {
     #gotop {
@@ -1452,21 +1418,8 @@ nav ul li:hover a {
     header .container {
         padding: 0 14px;
     }
-
-    header .head_logo {
-        float: none;
-        padding-top: 0;
-        height: 48px;
-    }
-
-    header .guiclogo {
-        max-height: 100%;
-    }
     header .guiclogo img{
-        height: 48px;
-    }
-    header .logo_line {
-        margin: 0px 10px;
+        height: 44px;
     }
 }
 
