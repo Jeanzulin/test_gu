@@ -34,7 +34,7 @@
 /* breadcrumb*/
 ul.breadcrumb {
     list-style: none;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 ul.breadcrumb li {
     display: inline;
@@ -81,18 +81,21 @@ ul.breadcrumb li a:hover {
 
 .card .card-img {
     width: 50%;
+    max-height: 320px;
 }
 .card .card-img img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 @media screen and (max-width: 1200px) {
     .card .card-txt {
-        width: 70%;
+        width: 65%;
+        padding: 16px 24px;
     }
     .card .card-img {
-        width: 30%;
+        width: 35%;
+        max-height: 250px;
     }
 }
 @media screen and (max-width: 768px) {

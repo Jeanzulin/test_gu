@@ -1,4 +1,3 @@
-
 /* ------------------------------------------ kv 
 --------------------------------------------- */
 .kv {
@@ -59,16 +58,25 @@
 .sec_about {
     overflow: hidden;
 }
-.sec_about .content p{
-   line-height: 2;
+
+.sec_about .content p {
+    line-height: 2;
 }
+
 .sec_about .content_img {
     width: 45%;
+    max-height: 380px;
     padding-right: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.sec_about .content_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sec_about .content_tab {
@@ -77,12 +85,14 @@
 }
 
 @media screen and (max-width: 786px) {
-    .sec_about .content p{
+    .sec_about .content p {
         font-size: 16px;
-     }
+    }
+
     .sec_about .content_img {
         order: 2;
         width: 100%;
+        max-height: 250px;
         padding-right: 0px;
     }
 
@@ -122,7 +132,7 @@
 }
 
 .sec_solution .content {
-    width: 850px;
+    width: 920px;
     text-align: center;
 }
 
@@ -131,12 +141,15 @@
         width: auto;
     }
 }
-.sec_solution .img_process{
+
+.sec_solution .img_process {
     display: block;
 }
-.sec_solution .img_process_sm{
+
+.sec_solution .img_process_sm {
     display: none;
 }
+
 .sec_solution .btn-group {
     margin-top: 40px;
 }
@@ -157,15 +170,17 @@
     .sec_solution {
         padding-top: 32px;
     }
-    
-    .sec_solution .img_process{
+
+    .sec_solution .img_process {
         display: none;
     }
-    .sec_solution .img_process_sm{
+
+    .sec_solution .img_process_sm {
         display: block;
         margin: 0 auto;
         max-width: 388px;
     }
+
     .sec_solution .btn-group {
         margin-top: 40px;
     }
@@ -188,22 +203,26 @@
     color: #ffffff;
     margin-bottom: 64px;
 }
-.sec_clients .content{
-    width: 800px;
+
+.sec_clients .content {
+    width: 920px;
 }
-.sec_clients .client_logo{
+
+.sec_clients .client_logo {
     width: 25%;
     text-align: center;
     margin-bottom: 48px;
 }
+
 .sec_clients .client_logo img {
     width: 100px;
 }
 
 @media screen and (max-width: 768px) {
-    .sec_clients .content{
+    .sec_clients .content {
         width: 100%;
     }
+
     .sec_clients .client_logo img {
         width: 80px;
     }
@@ -233,10 +252,12 @@
     padding: 80px 0;
     width: 65%;
 }
+
 .sec_contact .content_form form {
     margin: 0 auto;
     max-width: 65%;
 }
+
 @media screen and (max-width: 786px) {
 
     .sec_contact .content_map {
@@ -251,6 +272,7 @@
         margin: 0 auto;
         padding: 36px 0;
     }
+
     .sec_contact .content_form form {
         max-width: 85%;
     }

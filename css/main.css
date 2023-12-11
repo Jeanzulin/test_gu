@@ -1117,10 +1117,6 @@ nav ul li:hover a {
     nav ul {
         padding: 0;
     }
-
-    nav ul li {
-        margin: 0 5px;
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -1367,7 +1363,8 @@ nav ul li:hover a {
     }
 
     .main-nav ul.anchor li a {
-        font-size: 16px;
+        font-size: 18px;
+        line-height: 78px;
         display: block;
     }
 
