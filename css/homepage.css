@@ -61,6 +61,7 @@
 
 .sec_about .content p {
     line-height: 2;
+    word-wrap:break-word; 
 }
 
 .sec_about .content_img {
