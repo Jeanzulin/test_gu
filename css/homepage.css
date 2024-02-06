@@ -38,7 +38,7 @@
 
 @media screen and (max-width: 786px) {
     .kv {
-        height: 480px;
+        height: 100vh;
     }
 
     .kv .content-txt {
@@ -144,12 +144,13 @@
 }
 
 .sec_solution .img_process {
-    display: block;
+    /* display: block; */
+    width: 600px;
 }
 
-.sec_solution .img_process_sm {
+/* .sec_solution .img_process_sm {
     display: none;
-}
+} */
 
 .sec_solution .btn-group {
     margin-top: 40px;
@@ -171,7 +172,7 @@
     .sec_solution {
         padding-top: 32px;
     }
-
+/* 
     .sec_solution .img_process {
         display: none;
     }
@@ -179,8 +180,7 @@
     .sec_solution .img_process_sm {
         display: block;
         margin: 0 auto;
-        max-width: 388px;
-    }
+    } */
 
     .sec_solution .btn-group {
         margin-top: 40px;
@@ -202,9 +202,12 @@
 
 .sec_clients .title-3 {
     color: #ffffff;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
-
+.sec_clients p{
+    color: #ffffff;
+    margin-bottom: 56px;
+}
 .sec_clients .content {
     width: 920px;
 }
@@ -216,7 +219,7 @@
 }
 
 .sec_clients .client_logo img {
-    width: 100px;
+    width: 115px;
 }
 
 @media screen and (max-width: 768px) {
@@ -226,6 +229,11 @@
 
     .sec_clients .client_logo img {
         width: 80px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sec_clients .title-3 {
+       font-size: 22px;
     }
 }
 
