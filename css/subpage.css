@@ -30,7 +30,12 @@
         font-size: 14px;
     }
 }
-
+@media screen and (max-width: 576px) {
+    .top_area_wrap {
+        height: auto;
+        min-height: 380px;
+    }
+}
 
 /* breadcrumb*/
 ul.breadcrumb {
