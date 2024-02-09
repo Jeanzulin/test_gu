@@ -14,8 +14,8 @@
     </meta>
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image" content="images/fb.jpg">
-    <meta property="og:image:type" content="images/fb.jpg">
+    <meta property="og:image" content="https://gwoueiintl.com/images/guic_logo_2.svg">
+    <meta property="og:image:type" content="https://gwoueiintl.com/images/guic_logo_2.svg">
     </meta>
     <meta property="og:site_name" content="">
     </meta>
@@ -272,7 +272,7 @@
                             <h2 class="title-2">CONTACT US</h2>
                         </div>
                         <div>
-                            <form action="index.html" method="post">
+                            <form id="contactForm" action="index.html" method="post">
                                 <fieldset>
                                     <label for="name">Name</label>
                                     <input type="text" id="name" name="user_name">
@@ -287,10 +287,9 @@
                                     <textarea id="msg" name="user_msg"
                                         placeholder="Tell us more about your requirement"></textarea>
                                 </fieldset>
-                                <button type="submit" class="text-center">
-                                    <a class="btn" href="" target="_blank">Send</a>
-                                </button>
+                                <button type="button" class="btn text-center" onclick="submitForm()">Send</button>
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -347,7 +346,7 @@
         $(window).scroll(function () {
             var top = $(window).scrollTop()
             var kvHeight = $(".kv").height() - 60;
-            console.log(top)
+            // console.log(top)
             /*put your color in background color */
             if (top < kvHeight) {
                 $(header).addClass('headerChange');
@@ -362,24 +361,55 @@
         })
 
 
-       /* $('.uk-tab li:nth-child(1)').on({
-            'click': function () {
-                $('.sec_about .content_img img').attr('src', 'images/overview.png');
-            }
-        });
-        $('.uk-tab li:nth-child(2)').on({
-            'click': function () {
-                $('.sec_about .content_img img').attr('src', 'images/circle-img1.png');
-            }
-        });
-        $('.uk-tab li:nth-child(3)').on({
-            'click': function () {
-                $('.sec_about .content_img img').attr('src', 'images/circle-img2.png');
-            }
-        });
-        */
+        /* $('.uk-tab li:nth-child(1)').on({
+             'click': function () {
+                 $('.sec_about .content_img img').attr('src', 'images/overview.png');
+             }
+         });
+         $('.uk-tab li:nth-child(2)').on({
+             'click': function () {
+                 $('.sec_about .content_img img').attr('src', 'images/circle-img1.png');
+             }
+         });
+         $('.uk-tab li:nth-child(3)').on({
+             'click': function () {
+                 $('.sec_about .content_img img').attr('src', 'images/circle-img2.png');
+             }
+         });
+         */
     </script>
+    <script>
+        function submitForm() {
+            // Get form values
+            var fullName = document.getElementById('name').value;
+            var email = document.getElementById('mail').value;
+            var phoneNumber = document.getElementById('phone').value;
+            var clientMessage = document.getElementById('msg').value;
 
+            // Create data object
+            var formData = {
+                "fullName": fullName,
+                "email": email,
+                "phoneNumber": phoneNumber,
+                "clientMessage": clientMessage
+            };
+
+            // Make the HTTP POST request
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://q507wtqe06.execute-api.us-west-2.amazonaws.com/dev/api/contact-form/v1', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('x-api-key', 'HbLvgpfjmg4514S2Qg07r14Zhjp0a01zFeCyn1y8');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Handle successful response, if needed
+                    console.log(xhr.responseText);
+                }
+            };
+
+            xhr.send(JSON.stringify(formData));
+        }
+    </script>
 
 
 </body>
