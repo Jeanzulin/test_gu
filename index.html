@@ -93,8 +93,10 @@
                 <nav class="main-nav" role="navigation">
                     <ul class="anchor">
                         <li><a href="#sec_about" data-scroll>About</a></li>
+                        <li><a href="capability.html" data-scroll>Capability</a></li>
                         <li><a href="product.html" data-scroll>Product</a></li>
                         <li><a href="service.html" data-scroll>Service</a></li>
+                        <li><a href="partner.html" data-scroll>Partner</a></li>
                         <li><a href="#sec_contact" data-scroll>Contact</a></li>
                     </ul>
                 </nav>
@@ -208,9 +210,10 @@
                 <div class="content">
                     <img class="img_process" src="images/process.png" alt="">
                     <!-- <img class="img_process_sm" src="images/process_sm.png" alt=""> -->
-                    <div class="margin-auto btn-group">
+                    <div class="text-center margin-auto btn-group">
+                        <a class="btn" href="capability.html">View Capability ›</a>
                         <a class="btn" href="product.html">View Products ›</a>
-                        <a class="btn" href="service.html">Explore Services ›</a>
+                        <a class="btn" href="service.html">View Services ›</a>
                     </div>
                 </div>
             </div>
@@ -253,6 +256,9 @@
                             <img class="" src="images/hurrcane.png" alt="">
                         </div>
                     </div>
+                    <div class="text-center margin-auto btn-group">
+                        <a class="btn btn-org" href="partner.html">View Partners ›</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -274,22 +280,21 @@
                         <div>
                             <form id="contactForm" action="index.html" method="post">
                                 <fieldset>
-                                    <label for="name">Name</label>
+                                    <label for="name">Name*</label>
                                     <input type="text" id="name" name="user_name">
 
-                                    <label for="email">Email</label>
+                                    <label for="email">Email*</label>
                                     <input type="email" id="mail" name="user_email">
 
-                                    <label for="phone">Phone</label>
+                                    <label for="phone">Phone*</label>
                                     <input type="text" id="phone" name="user_phone">
 
-                                    <label for="msg">Message</label>
+                                    <label for="msg">Message*</label>
                                     <textarea id="msg" name="user_msg"
                                         placeholder="Tell us more about your requirement"></textarea>
                                 </fieldset>
                                 <button type="button" class="btn text-center" onclick="submitForm()">Send</button>
                             </form>
-
                         </div>
                     </div>
                 </div>
@@ -386,8 +391,15 @@
             var phoneNumber = document.getElementById('phone').value;
             var clientMessage = document.getElementById('msg').value;
 
+            // Validate inputs
+            if (!fullName || !email || !phoneNumber || !clientMessage) {
+                alert('Please fill in all required fields marked *.');
+                return;
+            }
+
             // Create data object
             var formData = {
+                "belongToOrganization": "5ef0e24f63a48322336307e1", // This is Fixed
                 "fullName": fullName,
                 "email": email,
                 "phoneNumber": phoneNumber,
@@ -401,15 +413,27 @@
             xhr.setRequestHeader('x-api-key', 'HbLvgpfjmg4514S2Qg07r14Zhjp0a01zFeCyn1y8');
 
             xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    // Handle successful response, if needed
-                    console.log(xhr.responseText);
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200 || xhr.status == 201) {
+                        // Handle successful response
+                        console.log('Message successfully sent!');
+                        console.log(xhr.responseText);
+
+                        // Reload the website
+                        location.reload();
+                    } else {
+                        // Handle other status codes
+                        console.error('API request failed with status ' + xhr.status);
+                        console.error(xhr.responseText);
+                    }
                 }
             };
 
             xhr.send(JSON.stringify(formData));
         }
     </script>
+
+
 
 
 </body>

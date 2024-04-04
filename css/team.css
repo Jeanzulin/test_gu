@@ -1,0 +1,105 @@
+.card .card-txt--60 {
+    width: 60%;
+}
+
+.card .card-img--40 {
+    width: 40%;
+}
+
+.card .card-txt .title-lg {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+@media screen and (max-width: 768px) {
+    .card .card-txt--60 {
+        width: 100%;
+    }
+    
+    .card .card-img--40 {
+        width: 100%;
+    }
+    .card .card-txt .title-lg {
+        font-size: 24px;
+    }
+}
+
+.sec_quote {
+    background-color: #F4F4F4;
+}
+
+.sec_quote>div {
+    width: 80%;
+}
+
+.sec_quote p {
+    color: #DEAF26;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.sec_team h2 {
+    color: #0969A8;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+
+.mem_list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.mem-card {
+    display: flex;
+    width: 50%;
+    padding: 8px 16px;
+    margin-bottom: 32px;
+}
+
+.mem-img {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.mem-img img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.mem-detail {
+    margin: auto 0;
+    margin-left: 24px;
+}
+
+.mem-detail p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #7A7A7A;
+}
+
+.mem-detail .name {
+    color: #484848;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mem-detail .jobtitle {
+    color: #DEAF26;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.mem-detail .intro {
+    font-style: italic;
+}
+@media screen and (max-width: 768px) {
+    .mem-card {
+        width: 100%;
+    }
+    .mem-img {
+        width: 150px;
+        height: 150px;
+    }
+}

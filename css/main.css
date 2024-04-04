@@ -221,6 +221,12 @@ hr {
     margin-bottom: 24px;
 }
 
+.pd-0{
+    padding-bottom: 0;
+}
+.pt-0{
+    padding-top: 0;
+}
 .pl-8 {
     padding-left: 8px;
 }
@@ -465,6 +471,10 @@ hr {
 
 .btn:hover {
     opacity: .8;
+}
+
+.btn-org{
+    background:#f1b400;
 }
 
 .btn--inline {
@@ -1119,7 +1129,7 @@ nav ul li:hover a {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 940px) {
     .m_cta {
         background: rgba(0, 158, 150, 0.85);
         position: fixed;

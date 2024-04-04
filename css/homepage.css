@@ -221,6 +221,9 @@
 .sec_clients .client_logo img {
     width: 115px;
 }
+.sec_clients .btn-group {
+    margin-top: 40px;
+}
 
 @media screen and (max-width: 768px) {
     .sec_clients .content {
